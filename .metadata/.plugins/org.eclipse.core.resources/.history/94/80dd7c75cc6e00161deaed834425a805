@@ -1,0 +1,6 @@
+
+public class Calculate {
+	public double square(double number){
+		return (number * number);
+	}
+}
