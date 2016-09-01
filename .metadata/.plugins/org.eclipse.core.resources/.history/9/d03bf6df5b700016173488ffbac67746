@@ -22,7 +22,7 @@ public class Calculate {
 		return (b*b - 4*a*c);	
 	}
 	public static double toImproperFrac(double wholenum, double nominator, double denominator){
-		return (wholenum * denominator + 1 + )+ denominator);	
+		return (wholenum * denominator + 1 +string("/")+ denominator);	
 	}
 
 }
