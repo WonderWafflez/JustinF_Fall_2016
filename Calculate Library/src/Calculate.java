@@ -21,8 +21,29 @@ public class Calculate {
 	public static double discriminant(double a, double b, double c){
 		return (b*b - 4*a*c);	
 	}
-	public static double toImproperFrac(double wholenum, double nominator, double denominator){
-		return (wholenum * denominator + 1 + )+ denominator);	
+	public static String toImproperFrac(double wholenum, double nominator, double denominator){
+		String fraction = (wholenum * denominator + nominator) + "/" + denominator;
+		return fraction;	
 	}
-
+	public static String toMixedNum(double nominator, double denominator){
+		int wholeNum = (int)nominator/ (int)denominator;
+		nominator = (int) nominator % (int) denominator;
+		String MixedNum = wholeNum + " " + nominator + denominator;
+		return MixedNum;	
+	}
+	public static String foil(int first, int second, int third, int fourth, String variable){
+		int a = first * third;
+		int b = second * third + first * fourth;
+		int c = second * fourth;
+		String function = a + variable + "^2 +" + b + variable + " + " + c;
+		return function;	
+	}
+	public static boolean isDivisibleBy(int x, int y){
+		if (x % y == 0){
+			return true;
+		}
+		else{
+			return false;
+		}
+	}
 }
