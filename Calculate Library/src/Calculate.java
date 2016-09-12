@@ -46,4 +46,42 @@ public class Calculate {
 			return false;
 		}
 	}
+	public static double absValue(double x){
+		double answer;
+		if (x >= 0){
+			answer =  x;
+		}
+		else{
+			answer = (x - (2 * x));
+		}
+		return answer;
+	}
+	public static int max(int x, int y){
+		if (x > y){
+			return x;
+		}
+		else{
+			return y;
+		}
+	}
+	public static double max(double x, double y, double z){
+		double answer = 1;
+		if (x > y){
+			if (x > z){
+				answer = x;
+			}
+			else{
+				answer = z;
+			}
+		}
+		if (y > x){
+			if (y > z){
+				answer = y;
+			}
+			else{
+				answer = z;
+			}
+		}
+		return answer;
+	}
 }
