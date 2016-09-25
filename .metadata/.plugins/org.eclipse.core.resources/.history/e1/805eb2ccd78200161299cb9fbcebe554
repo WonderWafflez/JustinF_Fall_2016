@@ -1,0 +1,127 @@
+
+public class Calculate {
+	public static double square(double number){
+		return (number * number);
+	}
+	public static double cube(double number){
+		return (number * number * number);	
+	}
+	public static double average(double number1, double number2){
+		return (number1 * number2 / 2);	
+	}
+	public static double average(double number1, double number2, double number3){
+		return (number1 * number2 * number3 / 3);	
+	}
+	public static double toDegrees(double radians){
+		return (radians * 180 / 3.14159);	
+	}
+	public static double toRadians(double degrees){
+		return (degrees * 3.14159 / 180);	
+	}
+	public static double discriminant(double a, double b, double c){
+		return (b*b - 4*a*c);	
+	}
+	public static String toImproperFrac(double wholenum, double nominator, double denominator){
+		String fraction = (int)(wholenum * denominator + nominator) + "/" + (int)denominator;
+		return fraction;	
+	}
+	public static String toMixedNum(double nominator, double denominator){
+		int wholeNum = (int)nominator/ (int)denominator;
+		nominator = (int) nominator % (int) denominator;
+		String MixedNum = wholeNum + " " + nominator + denominator;
+		return MixedNum;	
+	}
+	public static String foil(int first, int second, int third, int fourth, String variable){
+		int a = first * third;
+		int b = second * third + first * fourth;
+		int c = second * fourth;
+		String function = a + variable + "^2 +" + b + variable + " + " + c;
+		return function;	
+	}
+	public static boolean isDivisibleBy(int x, int y){
+		if (x % y == 0){
+			return true;
+		}
+		else{
+			return false;
+		}
+	}
+	public static double absValue(double x){
+		double answer;
+		if (x >= 0){
+			answer =  x;
+		}
+		else{
+			answer = (x - (2 * x));
+		}
+		return answer;
+	}
+	public static int max(int x, int y){
+		if (x > y){
+			return x;
+		}
+		else{
+			return y;
+		}
+	}
+	public static double max(double x, double y, double z){
+		double answer = 1;
+		if (x > y){
+			if (x > z){
+				answer = x;
+			}
+			else{
+				answer = z;
+			}
+		}
+		if (y > x){
+			if (y > z){
+				answer = y;
+			}
+			else{
+				answer = z;
+			}
+		}
+		return answer;
+	}
+	public static int min(int x, int y){
+		if (x < y){
+			return x;
+		}
+		else{
+			return y;
+		}
+	}
+	public static double round2(double x){
+		x = x*1000;
+		x = (int) x;
+		x += 5;
+		x = x/10;
+		x = (double) x;
+		x = x/100;
+		return x;
+	}
+	public static double exponent(double num, int power){
+		double answer = num;
+		for (int i = 1; i < power; i++){
+			answer = answer * num;
+		}
+		return answer;
+	}
+	public static int factorial(int num){
+		int answer = 1;
+		for (int i = 1; i <= num; i++){
+			answer = answer * i;
+		}
+		return answer;
+	}
+	public static boolean isPrime(int num){
+		boolean prime = true;
+		for (int i = 2; i < num; i++){
+			if (Calculate.isDivisibleBy(num, i)){
+				prime = false;
+			}
+		}
+		return prime;
+	}
+}
